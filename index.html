@@ -289,6 +289,200 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="othame.com/2019/06/26/《力学》笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Othame">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Othame's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/26/《力学》笔记/" class="post-title-link" itemprop="url">未命名</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-26 08:12:50 / 修改时间：08:57:15" itemprop="dateCreated datePublished" datetime="2019-06-26T08:12:50+08:00">2019-06-26</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><ul>
+<li><p>自由度：唯一地确定系统位置所需独立变量的数目</p>
+</li>
+<li><p>广义坐标：对于$s$个自由度的系统，可以完全刻画其位置的任意$s$个变量$q_1,q_2,…,q_s$称为该系统的<em>广义坐标</em></p>
+</li>
+<li><p>运动方程：加速度与坐标，速度的关系式</p>
+</li>
+<li><p>运动积分：值在运动过程中保持 <strong>恒定</strong>，且仅由 <strong>初始条件</strong> 决定的，关于描述力学系统运动状态的$2s$个变量 $q_i,\dot{q_i}(i=1,2,..,s)$ 的函数</p>
+</li>
+<li><p>拉格朗日函数：</p>
+<script type="math/tex; mode=display">L(q,\dot{q}, t )</script></li>
+<li><p>作用量：</p>
+<script type="math/tex; mode=display">
+S = \int_{t_1}^{t_2}L(q,\dot{q}, t)dt</script></li>
+<li><p>哈密顿函数：</p>
+<script type="math/tex; mode=display">
+H(p,q,t) = \sum_i p_i \dot{q_i} - L</script></li>
+<li><p>质点系的拉格朗日函数：</p>
+<script type="math/tex; mode=display">
+L=\frac{1}{2} \sum_{i,k}a_{ik}(q)\dot{q_i}\dot{q_k}-U(q)</script></li>
+<li><p>能量：</p>
+<script type="math/tex; mode=display">
+E=\sum_i\dot{q_i}\frac{\partial  L}{\partial \dot{q_i}} - L</script></li>
+<li><p>动量：</p>
+<script type="math/tex; mode=display">
+p_i = \frac{\partial L}{\partial \dot{q_i}}</script></li>
+<li><p>力：</p>
+<script type="math/tex; mode=display">
+F_i=\frac{\partial L}{\partial q_i}</script></li>
+<li><p>角动量：</p>
+<script type="math/tex; mode=display">
+M_i=\frac{\partial L}{\partial \varphi_i}</script></li>
+<li><p>泊松括号：</p>
+<script type="math/tex; mode=display">
+\{ f,g \}= \sum_k (\frac{\partial  f}{\partial  p_k} \frac{\partial g}{\partial  q_k}-\frac{\partial  f}{\partial  q_k} \frac{\partial g}{\partial  p_k}</script></li>
+</ul>
+<h1 id="基本公式"><a href="#基本公式" class="headerlink" title="基本公式"></a>基本公式</h1><ul>
+<li><p>最小作用量原理：</p>
+<script type="math/tex; mode=display">
+\delta S = \delta \int_{t_1}^{t_2} L(q, \dot{q}, t)dt = 0</script></li>
+<li><p>拉格朗日方程：</p>
+<script type="math/tex; mode=display">
+\frac{d}{dt} \frac{\partial L}{\partial \dot{q_i}} - \frac{\partial L}{\partial q_i} = 0</script></li>
+<li><p>哈密顿方程(正则方程)：</p>
+<script type="math/tex; mode=display">
+\dot{q_i} = \frac{\partial H}{\partial p_i}, \dot{p_i} = -\frac{\partial H}{\partial q_i}</script></li>
+<li><p>雅可比恒等式：</p>
+<script type="math/tex; mode=display">
+\{ f, \{ g,h \}\} + \{ g, \{ h,f \} \} + \{ h, f,g   \} \}=0</script></li>
+</ul>
+<h1 id="一些理解"><a href="#一些理解" class="headerlink" title="一些理解"></a>一些理解</h1><ul>
+<li>力学系统的运动完全由 _最小作用量原理_ 确定：通过求解由该原理导出的运动方程，可以得到轨道的 <strong>形式</strong> 以及在轨道上 <strong>位置与时间</strong> 的函数关系</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="othame.com/2019/06/25/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -479,7 +673,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
