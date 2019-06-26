@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[《力学》笔记]]></title>
+    <url>%2F2019%2F06%2F26%2F%E3%80%8A%E5%8A%9B%E5%AD%A6%E3%80%8B%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[最近朗道十卷(实际上只有九本)终于在费尽周折之后到手了 但只是瞎看看翻翻并没啥效果 所以就抽出些时间写一些笔记，辅助理解，也算个整理吧 实际就是懒得做题巩固 基本概念 自由度：唯一地确定系统位置所需独立变量的数目 广义坐标：对于$s$个自由度的系统，可以完全刻画其位置的任意$s$个变量$q_1,q_2,…,q_s$称为该系统的广义坐标 运动方程：加速度与坐标，速度的关系式 运动积分：值在运动过程中保持 恒定，且仅由 初始条件 决定的，关于描述力学系统运动状态的$2s$个变量 $q_i,\dot{q_i}(i=1,2,..,s)$ 的函数 拉格朗日函数： L(q,\dot{q}, t ) 作用量： S = \int_{t_1}^{t_2}L(q,\dot{q}, t)dt 哈密顿函数： H(p,q,t) = \sum_i p_i \dot{q_i} - L 质点系的拉格朗日函数： L=\frac{1}{2} \sum_{i,k}a_{ik}(q)\dot{q_i}\dot{q_k}-U(q) 能量： E=\sum_i\dot{q_i}\frac{\partial L}{\partial \dot{q_i}} - L 动量： p_i = \frac{\partial L}{\partial \dot{q_i}} 力： F_i=\frac{\partial L}{\partial q_i} 角动量： M_i=\frac{\partial L}{\partial \varphi_i} 泊松括号： \{ f,g \}= \sum_k (\frac{\partial f}{\partial p_k} \frac{\partial g}{\partial q_k}-\frac{\partial f}{\partial q_k} \frac{\partial g}{\partial p_k} 基本公式 最小作用量原理： \delta S = \delta \int_{t_1}^{t_2} L(q, \dot{q}, t)dt = 0 拉格朗日方程： \frac{d}{dt} \frac{\partial L}{\partial \dot{q_i}} - \frac{\partial L}{\partial q_i} = 0 哈密顿方程(正则方程)： \dot{q_i} = \frac{\partial H}{\partial p_i}, \dot{p_i} = -\frac{\partial H}{\partial q_i} 雅可比恒等式： \{ f, \{ g,h \}\} + \{ g, \{ h,f \} \} + \{ h, f,g \} \}=0 一些理解 力学系统的运动完全由 _最小作用量原理_ 确定：通过求解由该原理导出的运动方程，可以得到轨道的 形式 以及在轨道上 位置与时间 的函数关系]]></content>
+      <tags>
+        <tag>笔记</tag>
+        <tag>物理</tag>
+      </tags>
+  </entry>
+</search>
