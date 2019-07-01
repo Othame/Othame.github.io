@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Othame&#39;s Blog">
 <meta property="og:description" content="3Blue1Brown,以专业数学素养和高质量的可视化数学教学闻名的YouTube频道，其中的微积分系列和线性代数系列更是外行能欣赏其形式美，内行能欣赏其内容美的佳作，帮助了许多人建立数学直觉(math intuition)层面上的更深理解 笔者最近便学习了其可视化制作的动画引擎——manim的使用，本着_学了无聊就要写笔记_ 的原则，在此稍作记录">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-30T13:09:06.563Z">
+<meta property="og:updated_time" content="2019-07-01T05:30:28.136Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="manim学习笔记">
 <meta name="twitter:description" content="3Blue1Brown,以专业数学素养和高质量的可视化数学教学闻名的YouTube频道，其中的微积分系列和线性代数系列更是外行能欣赏其形式美，内行能欣赏其内容美的佳作，帮助了许多人建立数学直觉(math intuition)层面上的更深理解 笔者最近便学习了其可视化制作的动画引擎——manim的使用，本着_学了无聊就要写笔记_ 的原则，在此稍作记录">
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-30 21:09:06" itemprop="dateModified" datetime="2019-06-30T21:09:06+08:00">2019-06-30</time>
+                <time title="修改时间：2019-07-01 13:30:28" itemprop="dateModified" datetime="2019-07-01T13:30:28+08:00">2019-07-01</time>
               
             
           </span>
@@ -511,8 +511,24 @@
 The `<video>` tag is not supported by your browser.
 </video>
 
-<p>未完待更…</p>
+
+<h1 id="Circle"><a href="#Circle" class="headerlink" title="Circle"></a>Circle</h1><p>这是根据一个能在上下移动时显示与屏幕水平中线相对位置的正方形改编的</p>
+<p>为了好玩乱改一通结果折腾了一个上午。。</p>
+<p>话不多说先上代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> manimlib.imports <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DrawCircle</span><span class="params">(Scene)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">construct</span><span class="params">(self)</span>:</span></span><br><span class="line">        decimal = DecimalNumber(</span><br><span class="line">            <span class="number">0</span>,</span><br><span class="line">            show_ellipsis=<span class="literal">True</span>,</span><br><span class="line">            num_decimal_places=<span class="number">3</span>,</span><br><span class="line">            include_sign=<span class="literal">True</span>,</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        circle1 = Circle()</span><br><span class="line">        circle2 = Circle(color = RED).to_edge(UP)</span><br><span class="line">        circle3 = Circle(color = BLUE).to_edge(DOWN)</span><br><span class="line">        circle4 = Circle()</span><br><span class="line"></span><br><span class="line">        decimal.add_updater(<span class="keyword">lambda</span> d: d.next_to(circle1, RIGHT))</span><br><span class="line">        decimal.add_updater(<span class="keyword">lambda</span> d: d.set_value(circle1.get_center()[<span class="number">1</span>]))</span><br><span class="line"></span><br><span class="line">        self.play(ShowCreation(circle1))</span><br><span class="line">        self.play(ShowCreation(decimal))</span><br><span class="line">        self.play(</span><br><span class="line">            circle1.to_edge, UP,</span><br><span class="line">            rate_func = rush_from,</span><br><span class="line">            run_time = <span class="number">1.25</span>,</span><br><span class="line">        )</span><br><span class="line">        self.play(FadeOut(circle1), FadeIn(circle2))</span><br><span class="line">        decimal.add_updater(<span class="keyword">lambda</span> d: d.next_to(circle2, RIGHT))</span><br><span class="line">        decimal.add_updater(<span class="keyword">lambda</span> d: d.set_value(circle2.get_center()[<span class="number">1</span>]))</span><br><span class="line">        self.play(</span><br><span class="line">            circle2.to_edge, DOWN,</span><br><span class="line">            rate_fuc = rush_from,</span><br><span class="line">            run_time = <span class="number">2.5</span></span><br><span class="line">        )</span><br><span class="line">        self.play(FadeOut(circle2), FadeIn(circle3))</span><br><span class="line">        decimal.add_updater(<span class="keyword">lambda</span> d: d.next_to(circle3, RIGHT))</span><br><span class="line">        decimal.add_updater(<span class="keyword">lambda</span> d: d.set_value(circle3.get_center()[<span class="number">1</span>]))</span><br><span class="line">        self.play(</span><br><span class="line">            circle3.center,</span><br><span class="line">            rate_fuc = rush_from,</span><br><span class="line">            run_time = <span class="number">1.25</span>,</span><br><span class="line">        )</span><br><span class="line">        self.play(Transform(circle3, circle4))</span><br><span class="line">        self.wait()</span><br></pre></td></tr></table></figure>
+<p><strong>decimal</strong>的意思是十进制数，第一个参数是初始值，<strong>show_ellipsis</strong>控制是否输出数字后的省略号，<strong>num_decimal_places</strong>是指显示到小数点后第几位（默认是两位），<strong>include_sign</strong>控制时候输出数字前的正号（若为<strong>False</strong>则默认不输出正号而默认输出负号）</p>
+<p><strong>Circle()</strong>是<strong>manilib\mobject\geometry.py </strong>中的圆的构造函数，<strong>color</strong>控制颜色，<strong>radius</strong>控制半径，<strong>height</strong>和<strong>width</strong>控制长和宽 ，<strong>to_edge()</strong>可以用于控制生成圆的初始位置，也可以控制圆的运动位置，<strong>UP/DOWN/LEFT/RIGHT</strong>控制上下左右（本质是方向不同的单位长度向量，可以乘以常数scale，也可以和其他向量加减）</p>
+<p><strong>add_updater</strong>虽然不知道是具体的意思，但笔者猜应该是对<strong>decimal</strong>的位置和数值进行更新，<strong>next_to()</strong>是一个平移函数，输入初始位置（一般用对象调用的方式给出）和方向后返回平移后具体位置，<strong>set_value()</strong>就是给出一个给定位置的相对位置（代码中的[1]代表纵坐标）</p>
+<p>在<strong>self.play()</strong>中控制对象运动时<strong>to_edge, UP</strong>给出对象的最终位置，<strong>rate_func</strong>给出运动方式和速率，具体参见<strong>manimlib\utils\rate_functions.py </strong></p>
+<p><strong>FadeIn()</strong>和<strong>FadeOut()</strong>分别是淡入和淡出，组合同时使用能起到切换对象的效果，在这里是用于解决<strong>Transform()</strong>会出现的切换后再运动时原对象会被复制一份并在原地不动的问题</p>
+<p><strong>center()</strong>顾名思义就是中间的意思，而<strong>ORIGIN</strong>是<strong>(0,0,0)</strong>的<strong>向量</strong></p>
+<p>最后效果见下</p>
+<video width="100%" height="400" src="DrawCircle.mp4" controls="controls">
+The `<video>` tag is not supported by your browser.
 </video>
+
+<p>未完待更…</p>
+</video></video>
       
     </div>
 
@@ -792,7 +808,7 @@ The `<video>` tag is not supported by your browser.
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-World"><span class="nav-number">1.</span> <span class="nav-text">Hello World</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-World"><span class="nav-number">1.</span> <span class="nav-text">Hello World</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Circle"><span class="nav-number"></span> <span class="nav-text">Circle</span></a></li></div>
             
 
           </div>
