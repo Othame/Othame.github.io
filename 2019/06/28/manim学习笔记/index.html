@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Othame&#39;s Blog">
 <meta property="og:description" content="3Blue1Brown,以专业数学素养和高质量的可视化数学教学闻名的YouTube频道，其中的微积分系列和线性代数系列更是外行能欣赏其形式美，内行能欣赏其内容美的佳作，帮助了许多人建立数学直觉(math intuition)层面上的更深理解 笔者最近便学习了其可视化制作的动画引擎——manim的使用，本着_学了无聊就要写笔记_ 的原则，在此稍作记录">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-01T05:30:28.136Z">
+<meta property="og:updated_time" content="2019-07-01T07:18:05.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="manim学习笔记">
 <meta name="twitter:description" content="3Blue1Brown,以专业数学素养和高质量的可视化数学教学闻名的YouTube频道，其中的微积分系列和线性代数系列更是外行能欣赏其形式美，内行能欣赏其内容美的佳作，帮助了许多人建立数学直觉(math intuition)层面上的更深理解 笔者最近便学习了其可视化制作的动画引擎——manim的使用，本着_学了无聊就要写笔记_ 的原则，在此稍作记录">
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-01 13:30:28" itemprop="dateModified" datetime="2019-07-01T13:30:28+08:00">2019-07-01</time>
+                <time title="修改时间：2019-07-01 15:18:05" itemprop="dateModified" datetime="2019-07-01T15:18:05+08:00">2019-07-01</time>
               
             
           </span>
@@ -494,7 +494,7 @@
         <p><strong>3Blue1Brown</strong>,以专业数学素养和高质量的可视化数学教学闻名的YouTube频道，其中的<strong>微积分系列</strong>和<strong>线性代数系列</strong>更是外行能欣赏其形式美，内行能欣赏其内容美的佳作，帮助了许多人建立<strong>数学直觉(math intuition)</strong>层面上的更深理解</p>
 <p>笔者最近便学习了其可视化制作的动画引擎——<strong>manim</strong>的使用，本着_学了无聊就要写笔记_ 的原则，在此稍作记录</p>
 <a id="more"></a>
-<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p>​    众所周知，不管是啥语言都要从最基本的最经典的”Hello World”写起    </p>
+<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p>​    众所周知，不管是啥语言都要从最基本的最经典的”Hello World”写起    </p>
 <p>​    先上代码</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> manimlib.imports <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span><span class="params">(Scene)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">construct</span><span class="params">(self)</span>:</span></span><br><span class="line">        example_text = TextMobject(</span><br><span class="line">            <span class="string">"Hello World"</span>,</span><br><span class="line">            tex_to_color_map=&#123;<span class="string">"Hello"</span>: RED, <span class="string">"World"</span>: BLUE&#125;</span><br><span class="line">        )</span><br><span class="line">        example_tex = TexMobject(</span><br><span class="line">            <span class="string">"\\delta S = \\delta \\int_&#123;t_1&#125;^&#123;t_2&#125; L dt = 0"</span>,</span><br><span class="line">        )</span><br><span class="line">        group = VGroup(example_text, example_tex)</span><br><span class="line">        group.arrange(DOWN)</span><br><span class="line">        group.set_width(FRAME_WIDTH - <span class="number">2</span> * LARGE_BUFF)</span><br><span class="line"></span><br><span class="line">        self.play(Write(example_text))</span><br><span class="line">        self.play(Write(example_tex))</span><br><span class="line">        self.wait()</span><br></pre></td></tr></table></figure>
 <p>​    前面的<strong>manimlib.imports</strong>是manim的自带库，基本上所有需要用到的函数都在这个库引用到的文件中有应用</p>
@@ -509,6 +509,7 @@
 <p>​    最后效果如下</p>
 <video width="100%" height="400" src="Helloworld.mp4" controls="controls">
 The `<video>` tag is not supported by your browser.
+</video>
 </video>
 
 
@@ -528,7 +529,7 @@ The `<video>` tag is not supported by your browser.
 </video>
 
 <p>未完待更…</p>
-</video></video>
+</video>
       
     </div>
 
@@ -808,7 +809,7 @@ The `<video>` tag is not supported by your browser.
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-World"><span class="nav-number">1.</span> <span class="nav-text">Hello World</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Circle"><span class="nav-number"></span> <span class="nav-text">Circle</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hello-World"><span class="nav-number">1.</span> <span class="nav-text">Hello World</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Circle"><span class="nav-number">2.</span> <span class="nav-text">Circle</span></a></li></ol></div>
             
 
           </div>

@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Othame&#39;s Blog">
 <meta property="og:description" content="笔记（1）是一些分析力学的新内容和比较基础的东西，从笔记（2）开始就是具体的一些应用，形式比较繁琐，可能会每个开一篇讲解 实际上就是看书看不懂了抄书理解+水水时间">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-29T08:45:41.805Z">
+<meta property="og:updated_time" content="2019-07-01T07:11:53.208Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《力学》笔记(2)">
 <meta name="twitter:description" content="笔记（1）是一些分析力学的新内容和比较基础的东西，从笔记（2）开始就是具体的一些应用，形式比较繁琐，可能会每个开一篇讲解 实际上就是看书看不懂了抄书理解+水水时间">
@@ -416,12 +416,24 @@
                 
               
 
-              <time title="创建时间：2019-06-29 15:12:54 / 修改时间：16:45:41" itemprop="dateCreated datePublished" datetime="2019-06-29T15:12:54+08:00">2019-06-29</time>
+              <time title="创建时间：2019-06-29 15:12:54" itemprop="dateCreated datePublished" datetime="2019-06-29T15:12:54+08:00">2019-06-29</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-01 15:11:53" itemprop="dateModified" datetime="2019-07-01T15:11:53+08:00">2019-07-01</time>
               
             
           </span>
@@ -466,7 +478,7 @@
 <a id="more"></a>
 <h1 id="一维运动"><a href="#一维运动" class="headerlink" title="一维运动"></a>一维运动</h1><ul>
 <li>定义：一个自由度系统的运动</li>
-<li>定常外部条件下，朗格朗日函数的一般形式：</li>
+<li>定常外部条件下，拉格朗日函数的一般形式：</li>
 </ul>
 <script type="math/tex; mode=display">
 L=\frac{1}{2}a(q)\dot{q}^2-U(q)</script><p>​        使用笛卡尔坐标时$a(q) = m$</p>
@@ -488,28 +500,50 @@ t=\sqrt{\frac{m}{2}}\int\frac{dx}{\sqrt{E-U(x)}} + const</script></li>
 <script type="math/tex; mode=display">
 T(E)=\sqrt{2m}\int_{x_1(E)}^{x_2(E)}\frac{dx}{\sqrt{E-U(x)}}</script><p>其中$x_1,x_2$为方程$U(x)=E$的根</p>
 </li>
-<li><p>e.g.求平面单摆（质量为$m$，摆场为 $l$，在重力场$g$中运动）振动周期和振幅之间的函数关系</p>
+</ul>
+<p>  e.g.求平面单摆（质量为$m$，摆场为 $l$，在重力场$g$中运动）振动周期和振幅之间的函数关系</p>
 <ul>
 <li><p>已知 单摆 的能量为</p>
 <script type="math/tex; mode=display">
 E=\frac{ml^2\dot{\varphi}^2}{2}-mglcos\varphi= - mglcos\varphi_0</script><p>其中$\varphi$为绳与竖直方向夹角，$\varphi_0$为最大摆角。</p>
 <p>所以有</p>
 <script type="math/tex; mode=display">
-\frac{l\dot{\varphi}^2}{2g}=cos\varphi-cos\varphi_0</script></li>
-</ul>
+\frac{l\dot{\varphi}^2}{2g}=cos\varphi-cos\varphi_0</script><p>即</p>
+<script type="math/tex; mode=display">
+t=\sqrt{\frac{l}{2g}}\int\frac{d\varphi}{\sqrt{cos\varphi-cos\varphi_0}} + const·</script><p>周期为$\varphi$从0到$\varphi_0$的4倍</p>
+<script type="math/tex; mode=display">
+T = 4\sqrt{\frac{l}{2g}}\int_0^{\varphi_0}\frac{d\varphi}{\sqrt{\cos\varphi-\cos\varphi_0}}=2\sqrt{\frac{l}{g}}\int_0^{\varphi_0}\frac{d\varphi}{\sqrt{\sin^2(\varphi_0/2)-\sin^2(\varphi/2)}}</script><p>令$\sin(\varphi/2)/\sin(\varphi_0/2)=\sin(\xi)$，上面的积分变为</p>
+<script type="math/tex; mode=display">
+T=4\sqrt\frac{l}{g}\int_0^{\pi/2}\frac{d\xi}{\sqrt{1-\sin(\frac{\varphi}2)^2\sin^2\xi}}</script><p>由<strong>第一类椭圆积分</strong>有</p>
+<script type="math/tex; mode=display">
+K(k)=\int_0^{\pi/2}\frac{d\xi}{\sqrt{1-k\sin^2\xi}}</script><p>则</p>
+<script type="math/tex; mode=display">
+T=4\sqrt\frac{l}{g}K(sin(\frac{\varphi_0}{2}))</script><p>当$\sin(\varphi_0/2)\approx\varphi_0/2&lt;&lt;1$（微振动）时，展开函数$K(k)$可得</p>
+<script type="math/tex; mode=display">
+T=2\pi\sqrt\frac{l}{g}(1+\frac{1}{16}\varphi_0^2+...)</script><p>展开式第一项即为平常使用的近似公式</p>
 </li>
 </ul>
-<pre><code>即
-$$
-t=\sqrt{\frac{l}{2g}}\int\frac{d\varphi}{\sqrt{cos\varphi-cos\varphi_0}} + const
-$$
-
-
-周期为$\varphi$从0到$\varphi_0$的4倍
-$$
-T = 4\sqrt{\frac{l}{2g}}\int_0^{\varphi_0}\frac{d\varphi}{\sqrt{cos\varphi-cos\varphi_0}}
-$$
-</code></pre>
+<ul>
+<li><p>若已知$T(E)$，试确定$U(x)$的形式</p>
+<p>有积分</p>
+<script type="math/tex; mode=display">
+T(E)=\sqrt{2m}\int_{x_1(E)}^{x_2(E)}\frac{dx}{\sqrt{E-U(x)}}</script><p>将坐标$x$作为$U$的函数，函数$x(U)$是双值的，用$\frac{dx}{dU}dU$代替$dx$，上述积分变为两个积分之和：从$x=x_1$到$x=0$和从$x=0$到$x=x_2$的积分，将这两个区域中的函数$x(U)$分别记作$x=x_1(U)$和$x=x_2(U)$</p>
+<p>显然，对于$U$积分的上下界分别为$E$和$0$，固有</p>
+<script type="math/tex; mode=display">
+T(E)=\sqrt{2m}\int_0^E\frac{dx_2(U)}{dU}\frac{dU}{\sqrt{E-U}}+\sqrt{2m}\int_E^0\frac{dx_1(U)}{dU}\frac{dU}{\sqrt{E-U}} \\
+    =\sqrt{2m}\int_0^E(\frac{dx_2(U)}{dU}-\frac{dx_1(U)}{dU})\frac{dU}{\sqrt{E-U}}</script><p>方程两边同除以$\sqrt{\alpha-E}$，其中$\alpha$为参数，然后对$E$从$0$到$\alpha$积分：</p>
+<script type="math/tex; mode=display">
+\int_0^\alpha \frac{T(E)dE}{\sqrt{\alpha-E}}=\sqrt{2m}\int_0^\alpha \int_0^E(\frac{dx_2(U)}{dU}-\frac{dx_1(U)}{dU})\frac{dUdE}{\sqrt{(\alpha-E)(E-U)}} \\
+=\sqrt{2m}\int_0^\alpha(\frac{dx_2(U)}{dU}-\frac{dx_1(U)}{dU})dU\int_U^\alpha \frac{dE}{\sqrt{(\alpha-E)(E-U)}}</script><p>对$E$的积分是初等积分，其值等于$\pi$，而对$U$的积分是平凡积分，故有</p>
+<script type="math/tex; mode=display">
+\int_0^\alpha \frac{T(E)dE}{\sqrt{\alpha-E}}=\pi\sqrt{2m}[x_2(\alpha)-x_1(\alpha)]</script><p>用$U$替换$\alpha$得</p>
+<script type="math/tex; mode=display">
+x_2(U)-x_1(U)=\frac{1}{\pi\sqrt{2m}}\int_0^\alpha \frac{T(E)dE}{\sqrt{\alpha-E}}</script><p><strong>即已知$T(E)$后我们就能确定$x_2(U)-x_1(U)$，但$U(x)$ 函数本身仍无法确定，故对于给定的周期与能量的关系，存在无穷多条曲线$U=U(x)$，但对于同一个$U$，两个$x$的差值是确定的</strong></p>
+<p>若$x_2(U)=-x_1(U)\equiv x(U)$，则有 </p>
+<script type="math/tex; mode=display">
+x(U)=\frac{1}{2\pi\sqrt{2m}}\int_0^\alpha \frac{T(E)dE}{\sqrt{\alpha-E}}</script></li>
+</ul>
+<h1 id="二体问题"><a href="#二体问题" class="headerlink" title="二体问题"></a>二体问题</h1>
       
     </div>
 
@@ -789,7 +823,7 @@ $$
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一维运动"><span class="nav-number">1.</span> <span class="nav-text">一维运动</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一维运动"><span class="nav-number">1.</span> <span class="nav-text">一维运动</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二体问题"><span class="nav-number">2.</span> <span class="nav-text">二体问题</span></a></li></ol></div>
             
 
           </div>
