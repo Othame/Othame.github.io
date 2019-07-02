@@ -369,6 +369,294 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="othame.com/2019/07/02/群论学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Othame">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Othame's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/02/群论学习笔记/" class="post-title-link" itemprop="url">群论学习笔记</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-02 10:38:58 / 修改时间：17:59:13" itemprop="dateCreated datePublished" datetime="2019-07-02T10:38:58+08:00">2019-07-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近看了李新征老师的《群论及其在物理学中的应用导论》，觉得收获颇丰，特别是比起以前看《近世代数》的时候感觉好懂很多，因为是上课的讲义，所以语言也更平易近人，总之就是，<strong>终于能看懂了！！！！</strong></p>
+<p>所以来整理一下相关的定理和证明，来加深理解</p>
+<h1 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h1><ul>
+<li><p>群：</p>
+<ul>
+<li><p>定义：</p>
+<p>对于集合$G=\{…,g,…\}$，有群乘法$h·g$，并满足以下性质：</p>
+<ul>
+<li>封闭性：$\forall h,g\in G$，有$hg \in G$</li>
+<li>结合律：$\forall f,h,g \in G$，有$(fg)h=f(gh)$</li>
+<li>单位元：$\forall g\in G$，有$eg= ge = g$</li>
+<li>逆元：$\forall g \in G$，$\exists g^{-1}$使得$gg^{-1}=g^{-1}g=e$</li>
+</ul>
+</li>
+<li><p>有限群和无限群：</p>
+<p>群内元素个数称为群的<strong>阶</strong>，当群阶有限时，称为有限群，当群阶无限时，称为无限群</p>
+</li>
+<li><p>$Abel$群：当群乘法满足交换律时，这个群称为$Abel$群</p>
+</li>
+<li><p>重排定理：</p>
+<ul>
+<li><p>定义：设群$G=\{…,g_\alpha,0…\}$，对于$\forall u \in G$，当$g_\alpha$取遍$G$中所有元素时，$ug_\alpha$给出且仅仅一次给出$G$中的所有元素</p>
+</li>
+<li><p>一些理解：<strong>仅仅一次给出</strong>指的是对于$g_\alpha\neq g_\beta$时，必定有$u g_\alpha \neq u g_\beta$</p>
+</li>
+<li><p>证明：</p>
+<ul>
+<li><p>1.任何$G$中元素都可以由$ug_\alpha$给出：</p>
+<p>$ \forall g_\beta \in G$，令$g_\alpha= u^{-1}g_\beta \in G$，使得$u g_\alpha=u(u^{-1}g_\beta)=g_\beta$</p>
+</li>
+<li><p>2.$u g_\alpha$给出且仅仅一次给出$G$中的所有元素（反证法）：</p>
+<p>设存在$g_\alpha \neq g_\beta$，使得$u g_\alpha=u g_\beta$，那么就有$u^{-1}u g_\alpha=u^{-1}u g_\beta$，则$g_\alpha = g_\beta$，与假设矛盾</p>
+</li>
+</ul>
+</li>
+<li><p>应用：很多证明时的形式为构造群$G$和$v^{-1}u$，若$v^{-1}u \in G$，则根据重排定理$v^{-1}uG=G$，故$uG=vG$</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>子群：</p>
+<ul>
+<li>定义：设$H$是群$G$的一个子集，若对于与$G$相同的乘法，$H$也构成一个群，则称$H$是$G$的一个子群</li>
+<li>一些理解：证明子集为子群时，只需证明对于子集封闭性和逆元成立</li>
+<li><p>$\{e\}$和$G$是$G$本身的显然子群，其非显然子群称为固有子群</p>
+</li>
+<li><p>群元的阶：对于任意一个有限群$G$从中取出一个元素$a$，从$a$出发作幂操作总能构成$G$的一个循环子群$Z_k=\{a、a^2、…、a^{k-1}、a^k=e\}$，满足这个定义的最小的$k$称为群元$a$的阶</p>
+</li>
+</ul>
+</li>
+<li><p>陪集：</p>
+<ul>
+<li><p>定义：设$H$是$G$的子群，$H=\{h_\alpha\}$，由固定的$g \in G$，可生成子群$H$的左陪集$gH=\{g h_\alpha|h_\alpha \in H\}$或右陪集$Hg=\{h_\alpha g|h_\alpha \in H\}$</p>
+</li>
+<li><p>一些理解：</p>
+<ul>
+<li>当$H$是有限子群时，陪集元素个数等于$H$的阶</li>
+<li>陪集可以为子集本身（取$g \in H$）</li>
+</ul>
+</li>
+<li><p>陪集定理：</p>
+<ul>
+<li><p>定义：设群$H$是群$G$的子群，则$H$的两个左（或右）陪集要么完全相等，要么没有任何公共元素</p>
+</li>
+<li><p>证明（反证法）：</p>
+<p>设$uH$、$vH$为群$G$的子群$H$的不同左陪集</p>
+<p>再设$uH$与$vH$中间有一个公共元素$u h_\alpha=v h_\beta$，则$ v^{-1} u h_{\alpha}= h_\beta$，进而$v^{-1}u=h_\beta h^{-1}_\alpha$，故$v^{-1}u \in H$             </p>
+<p>由重排定理可知，$v^{-1}uH=H$，则$uH=vH$，与假设矛盾</p>
+</li>
+</ul>
+</li>
+<li><p>拉格朗日$(Lagrange)$定理：</p>
+<ul>
+<li><p>定义：有限群子群的阶，必为群阶的因子</p>
+</li>
+<li><p>感性证明：</p>
+<p>设有群$G$，及其子群$H$，G的阶为$n$，$H$的阶为$m$，则$H$自身为一个陪集</p>
+<p>由陪集定理可知，可取$u_1 \in G$且$u_1 \notin H$使得陪集$u_1H$与$H$无公共元素，但陪集$u_1H $的阶与$H$相同，都为$m$，以此类推，可由子群$H$构造出$n/m$个不同的，且两两均无公共元素，能将$G$中的元素穷尽。数$n/m$必定是个整数，故$m$是$n$的因数</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>类：</p>
+<ul>
+<li><p>定义：群$G$中所有相互共轭的元素形成的集合</p>
+</li>
+<li><p>共轭：</p>
+<ul>
+<li>定义：对于$f、h \in G$，如果在$G$中存在一个$g$，使得$gfg^{-1}=h$，则称$f、h$共轭，记作$f \sim h$</li>
+<li>相互：$gfg^{-1}=h$，则$g^{-1}hg=f$，即$g^{-1}h(g^{-1})^{-1}=f$，因为$g^{-1} \in G$，故$h  \sim f$</li>
+<li>传递性：</li>
+</ul>
+</li>
+<li><p>对于一个类中任意一个元素$f$，取任意$g \in G$，则$gfg^{-1}$一定在这个类中，当$g$取遍$G$时就能得到整个类</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="一些实例"><a href="#一些实例" class="headerlink" title="一些实例"></a>一些实例</h1><ul>
+<li><p>空间反演群：$\{E,I\}$</p>
+<p>对于三维欧氏空间中的任一向量$\vec{r}$，$E$作用其上得到$\vec{r}$本身，$I$作用其上得到$-\vec{r}$</p>
+</li>
+<li><p>n阶置换群</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+P= \left(
+\matrix{
+     1 & 2 & ...  & n \\
+     m_1 & m_2 & ... & m_n
+}
+\right)</script><p>​        将$1、2、…、n$对应到$m_1、m_2、…、m_n$上，其中$m_1、m_2、…、m_n$是$1、2、…、n$的任意排列</p>
+<p>​        所有$P$的集合构成一个群，群元个数是$n!$</p>
+<ul>
+<li><p>$D_3$群</p>
+<p><img src="1562049578607.png" alt="三角形"></p>
+<p>$e$ ：不动<br>$d$ ：绕$z$轴转$2\pi/3$<br>$f$ ：绕$z$轴转$4\pi/3$<br>$a$ ：绕$1$轴转$\pi$<br>$b$ ：绕$2$轴转$\pi$<br>$c$ ：绕$3$轴转$\pi$</p>
+<p>$\{e,d,f,a,b,c\}$是图形中的三角形的<strong>纯转动群</strong></p>
+</li>
+<li><p>加法群：当定义群乘法为数的加法时，全体整数\实数\复数在该乘法规则下构成一个群</p>
+</li>
+<li><p>n阶循环群：$\{a、a^2 、… 、a^{n-1}、a^n=e\}$ 是$Abel$群</p>
+</li>
+<li><p>$SO(3)$群是绕空间中某一点（过这一点可以有无数条不同的轴）转动的元素的群</p>
+<p>绕固定轴$\vec{k}$转动的元素组成的群$\{C_{\vec{k}}(\Psi)\}$是其子群</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="othame.com/2019/06/30/高中刚开始对自己的一点要求/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -414,12 +702,24 @@
                 
               
 
-              <time title="创建时间：2019-06-30 20:35:12 / 修改时间：20:55:03" itemprop="dateCreated datePublished" datetime="2019-06-30T20:35:12+08:00">2019-06-30</time>
+              <time title="创建时间：2019-06-30 20:35:12" itemprop="dateCreated datePublished" datetime="2019-06-30T20:35:12+08:00">2019-06-30</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-01 21:39:55" itemprop="dateModified" datetime="2019-07-01T21:39:55+08:00">2019-07-01</time>
               
             
           </span>
@@ -1899,191 +2199,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="othame.com/2018/10/08/SDOI2014-旅行/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Othame">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Othame's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/10/08/SDOI2014-旅行/" class="post-title-link" itemprop="url">[SDOI2014]旅行</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-10-08 09:53:35" itemprop="dateCreated datePublished" datetime="2018-10-08T09:53:35+08:00">2018-10-08</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-06-26 13:09:50" itemprop="dateModified" datetime="2019-06-26T13:09:50+08:00">2019-06-26</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/题解/" itemprop="url" rel="index"><span itemprop="name">题解</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><a href="https://www.luogu.org/problemnew/show/P3313" target="_blank" rel="noopener">这里是原题QwQ</a><br>听说这题是动态开点线段树模板题？<br>观察一下题面，显然先上一发树剖，好像是对每一种宗教开一颗线段树，然后维护区间和和区间最大值。。。<br>虽然我是来练动态开点线段树板子的，考虑到fhq Treap极为好写，我还是<del>不要脸的</del>使用了fhq Treap来维护<br>我们可以对每一个宗教开一颗fhq Treap:</p>
-<ul>
-<li>第一个操作就是将节点换一棵树，那一个erase加一个insert就行了</li>
-<li>第二个操作是改变一个点的点权，我是采取erase出来之后直接修改value，pushup之后再insert回去的方法<del>这样好写</del></li>
-<li>第三个操作我们在链上向上跳的时候询问一下这段区间内的权值和即可</li>
-<li>第四个操作同操作三，询问区间最大值更新<br>总的来说其实不难想，就是把两个数据结构写写好套一套就行了<del>注意细节</del></li>
-</ul>
-<p><del>说好来练动态开点线段树的呢？</del></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/10/08/SDOI2014-旅行/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2131,7 +2246,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

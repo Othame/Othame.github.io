@@ -96,25 +96,27 @@
 
 
 
-  <meta name="description" content="123456#include &amp;lt;bits/stdc++.h&amp;gt;using namespace std;int main() &amp;#123;    cout &amp;lt;&amp;lt; &quot;Hello World!&quot; &amp;lt;&amp;lt; endl;    return 0;&amp;#125;">
-<meta name="keywords" content="模板">
+  <meta name="description" content="最近看了李新征老师的《群论及其在物理学中的应用导论》，觉得收获颇丰，特别是比起以前看《近世代数》的时候感觉好懂很多，因为是上课的讲义，所以语言也更平易近人，总之就是，终于能看懂了！！！！ 所以来整理一下相关的定理和证明，来加深理解 基本定义 群：  定义： 对于集合$G=\{…,g,…\}$，有群乘法$h·g$，并满足以下性质：  封闭性：$\forall h,g\in G$，有$hg \in G">
+<meta name="keywords" content="数学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="othame.com/2018/09/30/Hello-World/index.html">
+<meta property="og:title" content="群论学习笔记">
+<meta property="og:url" content="othame.com/2019/07/02/群论学习笔记/index.html">
 <meta property="og:site_name" content="Othame&#39;s Blog">
-<meta property="og:description" content="123456#include &amp;lt;bits/stdc++.h&amp;gt;using namespace std;int main() &amp;#123;    cout &amp;lt;&amp;lt; &quot;Hello World!&quot; &amp;lt;&amp;lt; endl;    return 0;&amp;#125;">
+<meta property="og:description" content="最近看了李新征老师的《群论及其在物理学中的应用导论》，觉得收获颇丰，特别是比起以前看《近世代数》的时候感觉好懂很多，因为是上课的讲义，所以语言也更平易近人，总之就是，终于能看懂了！！！！ 所以来整理一下相关的定理和证明，来加深理解 基本定义 群：  定义： 对于集合$G=\{…,g,…\}$，有群乘法$h·g$，并满足以下性质：  封闭性：$\forall h,g\in G$，有$hg \in G">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-08T04:14:24.000Z">
+<meta property="og:image" content="othame.com/2019/07/02/群论学习笔记/1562049578607.png">
+<meta property="og:updated_time" content="2019-07-02T09:59:13.694Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="123456#include &amp;lt;bits/stdc++.h&amp;gt;using namespace std;int main() &amp;#123;    cout &amp;lt;&amp;lt; &quot;Hello World!&quot; &amp;lt;&amp;lt; endl;    return 0;&amp;#125;">
+<meta name="twitter:title" content="群论学习笔记">
+<meta name="twitter:description" content="最近看了李新征老师的《群论及其在物理学中的应用导论》，觉得收获颇丰，特别是比起以前看《近世代数》的时候感觉好懂很多，因为是上课的讲义，所以语言也更平易近人，总之就是，终于能看懂了！！！！ 所以来整理一下相关的定理和证明，来加深理解 基本定义 群：  定义： 对于集合$G=\{…,g,…\}$，有群乘法$h·g$，并满足以下性质：  封闭性：$\forall h,g\in G$，有$hg \in G">
+<meta name="twitter:image" content="othame.com/2019/07/02/群论学习笔记/1562049578607.png">
 
 
 
 
 
 
-  <link rel="canonical" href="othame.com/2018/09/30/Hello-World/">
+  <link rel="canonical" href="othame.com/2019/07/02/群论学习笔记/">
 
 
 
@@ -124,7 +126,7 @@
   };
 </script>
 
-  <title>Hello World | Othame's Blog</title>
+  <title>群论学习笔记 | Othame's Blog</title>
   
 
 
@@ -373,7 +375,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="othame.com/2018/09/30/Hello-World/">
+    <link itemprop="mainEntityOfPage" href="othame.com/2019/07/02/群论学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Othame">
@@ -390,7 +392,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World
+          <h1 class="post-title" itemprop="name headline">群论学习笔记
 
               
             
@@ -416,24 +418,12 @@
                 
               
 
-              <time title="创建时间：2018-09-30 08:17:41" itemprop="dateCreated datePublished" datetime="2018-09-30T08:17:41+08:00">2018-09-30</time>
+              <time title="创建时间：2019-07-02 10:38:58 / 修改时间：17:59:13" itemprop="dateCreated datePublished" datetime="2019-07-02T10:38:58+08:00">2019-07-02</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-10-08 12:14:24" itemprop="dateModified" datetime="2018-10-08T12:14:24+08:00">2018-10-08</time>
               
             
           </span>
@@ -450,7 +440,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
 
                 
                 
@@ -491,7 +481,136 @@
       
 
       
-        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello World!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>最近看了李新征老师的《群论及其在物理学中的应用导论》，觉得收获颇丰，特别是比起以前看《近世代数》的时候感觉好懂很多，因为是上课的讲义，所以语言也更平易近人，总之就是，<strong>终于能看懂了！！！！</strong></p>
+<p>所以来整理一下相关的定理和证明，来加深理解</p>
+<h1 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h1><ul>
+<li><p>群：</p>
+<ul>
+<li><p>定义：</p>
+<p>对于集合$G=\{…,g,…\}$，有群乘法$h·g$，并满足以下性质：</p>
+<ul>
+<li>封闭性：$\forall h,g\in G$，有$hg \in G$</li>
+<li>结合律：$\forall f,h,g \in G$，有$(fg)h=f(gh)$</li>
+<li>单位元：$\forall g\in G$，有$eg= ge = g$</li>
+<li>逆元：$\forall g \in G$，$\exists g^{-1}$使得$gg^{-1}=g^{-1}g=e$</li>
+</ul>
+</li>
+<li><p>有限群和无限群：</p>
+<p>群内元素个数称为群的<strong>阶</strong>，当群阶有限时，称为有限群，当群阶无限时，称为无限群</p>
+</li>
+<li><p>$Abel$群：当群乘法满足交换律时，这个群称为$Abel$群</p>
+</li>
+<li><p>重排定理：</p>
+<ul>
+<li><p>定义：设群$G=\{…,g_\alpha,0…\}$，对于$\forall u \in G$，当$g_\alpha$取遍$G$中所有元素时，$ug_\alpha$给出且仅仅一次给出$G$中的所有元素</p>
+</li>
+<li><p>一些理解：<strong>仅仅一次给出</strong>指的是对于$g_\alpha\neq g_\beta$时，必定有$u g_\alpha \neq u g_\beta$</p>
+</li>
+<li><p>证明：</p>
+<ul>
+<li><p>1.任何$G$中元素都可以由$ug_\alpha$给出：</p>
+<p>$ \forall g_\beta \in G$，令$g_\alpha= u^{-1}g_\beta \in G$，使得$u g_\alpha=u(u^{-1}g_\beta)=g_\beta$</p>
+</li>
+<li><p>2.$u g_\alpha$给出且仅仅一次给出$G$中的所有元素（反证法）：</p>
+<p>设存在$g_\alpha \neq g_\beta$，使得$u g_\alpha=u g_\beta$，那么就有$u^{-1}u g_\alpha=u^{-1}u g_\beta$，则$g_\alpha = g_\beta$，与假设矛盾</p>
+</li>
+</ul>
+</li>
+<li><p>应用：很多证明时的形式为构造群$G$和$v^{-1}u$，若$v^{-1}u \in G$，则根据重排定理$v^{-1}uG=G$，故$uG=vG$</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>子群：</p>
+<ul>
+<li>定义：设$H$是群$G$的一个子集，若对于与$G$相同的乘法，$H$也构成一个群，则称$H$是$G$的一个子群</li>
+<li>一些理解：证明子集为子群时，只需证明对于子集封闭性和逆元成立</li>
+<li><p>$\{e\}$和$G$是$G$本身的显然子群，其非显然子群称为固有子群</p>
+</li>
+<li><p>群元的阶：对于任意一个有限群$G$从中取出一个元素$a$，从$a$出发作幂操作总能构成$G$的一个循环子群$Z_k=\{a、a^2、…、a^{k-1}、a^k=e\}$，满足这个定义的最小的$k$称为群元$a$的阶</p>
+</li>
+</ul>
+</li>
+<li><p>陪集：</p>
+<ul>
+<li><p>定义：设$H$是$G$的子群，$H=\{h_\alpha\}$，由固定的$g \in G$，可生成子群$H$的左陪集$gH=\{g h_\alpha|h_\alpha \in H\}$或右陪集$Hg=\{h_\alpha g|h_\alpha \in H\}$</p>
+</li>
+<li><p>一些理解：</p>
+<ul>
+<li>当$H$是有限子群时，陪集元素个数等于$H$的阶</li>
+<li>陪集可以为子集本身（取$g \in H$）</li>
+</ul>
+</li>
+<li><p>陪集定理：</p>
+<ul>
+<li><p>定义：设群$H$是群$G$的子群，则$H$的两个左（或右）陪集要么完全相等，要么没有任何公共元素</p>
+</li>
+<li><p>证明（反证法）：</p>
+<p>设$uH$、$vH$为群$G$的子群$H$的不同左陪集</p>
+<p>再设$uH$与$vH$中间有一个公共元素$u h_\alpha=v h_\beta$，则$ v^{-1} u h_{\alpha}= h_\beta$，进而$v^{-1}u=h_\beta h^{-1}_\alpha$，故$v^{-1}u \in H$             </p>
+<p>由重排定理可知，$v^{-1}uH=H$，则$uH=vH$，与假设矛盾</p>
+</li>
+</ul>
+</li>
+<li><p>拉格朗日$(Lagrange)$定理：</p>
+<ul>
+<li><p>定义：有限群子群的阶，必为群阶的因子</p>
+</li>
+<li><p>感性证明：</p>
+<p>设有群$G$，及其子群$H$，G的阶为$n$，$H$的阶为$m$，则$H$自身为一个陪集</p>
+<p>由陪集定理可知，可取$u_1 \in G$且$u_1 \notin H$使得陪集$u_1H$与$H$无公共元素，但陪集$u_1H $的阶与$H$相同，都为$m$，以此类推，可由子群$H$构造出$n/m$个不同的，且两两均无公共元素，能将$G$中的元素穷尽。数$n/m$必定是个整数，故$m$是$n$的因数</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>类：</p>
+<ul>
+<li><p>定义：群$G$中所有相互共轭的元素形成的集合</p>
+</li>
+<li><p>共轭：</p>
+<ul>
+<li>定义：对于$f、h \in G$，如果在$G$中存在一个$g$，使得$gfg^{-1}=h$，则称$f、h$共轭，记作$f \sim h$</li>
+<li>相互：$gfg^{-1}=h$，则$g^{-1}hg=f$，即$g^{-1}h(g^{-1})^{-1}=f$，因为$g^{-1} \in G$，故$h  \sim f$</li>
+<li>传递性：</li>
+</ul>
+</li>
+<li><p>对于一个类中任意一个元素$f$，取任意$g \in G$，则$gfg^{-1}$一定在这个类中，当$g$取遍$G$时就能得到整个类</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="一些实例"><a href="#一些实例" class="headerlink" title="一些实例"></a>一些实例</h1><ul>
+<li><p>空间反演群：$\{E,I\}$</p>
+<p>对于三维欧氏空间中的任一向量$\vec{r}$，$E$作用其上得到$\vec{r}$本身，$I$作用其上得到$-\vec{r}$</p>
+</li>
+<li><p>n阶置换群</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+P= \left(
+\matrix{
+     1 & 2 & ...  & n \\
+     m_1 & m_2 & ... & m_n
+}
+\right)</script><p>​        将$1、2、…、n$对应到$m_1、m_2、…、m_n$上，其中$m_1、m_2、…、m_n$是$1、2、…、n$的任意排列</p>
+<p>​        所有$P$的集合构成一个群，群元个数是$n!$</p>
+<ul>
+<li><p>$D_3$群</p>
+<p><img src="1562049578607.png" alt="三角形"></p>
+<p>$e$ ：不动<br>$d$ ：绕$z$轴转$2\pi/3$<br>$f$ ：绕$z$轴转$4\pi/3$<br>$a$ ：绕$1$轴转$\pi$<br>$b$ ：绕$2$轴转$\pi$<br>$c$ ：绕$3$轴转$\pi$</p>
+<p>$\{e,d,f,a,b,c\}$是图形中的三角形的<strong>纯转动群</strong></p>
+</li>
+<li><p>加法群：当定义群乘法为数的加法时，全体整数\实数\复数在该乘法规则下构成一个群</p>
+</li>
+<li><p>n阶循环群：$\{a、a^2 、… 、a^{n-1}、a^n=e\}$ 是$Abel$群</p>
+</li>
+<li><p>$SO(3)$群是绕空间中某一点（过这一点可以有无数条不同的轴）转动的元素的群</p>
+<p>绕固定轴$\vec{k}$转动的元素组成的群$\{C_{\vec{k}}(\Psi)\}$是其子群</p>
+</li>
+</ul>
+
       
     </div>
 
@@ -514,7 +633,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/模板/" rel="tag"># 模板</a>
+            <a href="/tags/数学/" rel="tag"># 数学</a>
           
         </div>
       
@@ -527,15 +646,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/06/30/高中刚开始对自己的一点要求/" rel="next" title="高中刚开始对自己的一点要求~">
+                <i class="fa fa-chevron-left"></i> 高中刚开始对自己的一点要求~
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/08/SDOI2014-旅行/" rel="prev" title="[SDOI2014]旅行">
-                [SDOI2014]旅行 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -584,8 +703,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -747,6 +875,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本定义"><span class="nav-number">1.</span> <span class="nav-text">基本定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些实例"><span class="nav-number">2.</span> <span class="nav-text">一些实例</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

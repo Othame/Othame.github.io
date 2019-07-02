@@ -369,6 +369,191 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="othame.com/2018/10/08/SDOI2014-旅行/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Othame">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Othame's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/10/08/SDOI2014-旅行/" class="post-title-link" itemprop="url">[SDOI2014]旅行</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-08 09:53:35" itemprop="dateCreated datePublished" datetime="2018-10-08T09:53:35+08:00">2018-10-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-26 13:09:50" itemprop="dateModified" datetime="2019-06-26T13:09:50+08:00">2019-06-26</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/题解/" itemprop="url" rel="index"><span itemprop="name">题解</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><a href="https://www.luogu.org/problemnew/show/P3313" target="_blank" rel="noopener">这里是原题QwQ</a><br>听说这题是动态开点线段树模板题？<br>观察一下题面，显然先上一发树剖，好像是对每一种宗教开一颗线段树，然后维护区间和和区间最大值。。。<br>虽然我是来练动态开点线段树板子的，考虑到fhq Treap极为好写，我还是<del>不要脸的</del>使用了fhq Treap来维护<br>我们可以对每一个宗教开一颗fhq Treap:</p>
+<ul>
+<li>第一个操作就是将节点换一棵树，那一个erase加一个insert就行了</li>
+<li>第二个操作是改变一个点的点权，我是采取erase出来之后直接修改value，pushup之后再insert回去的方法<del>这样好写</del></li>
+<li>第三个操作我们在链上向上跳的时候询问一下这段区间内的权值和即可</li>
+<li>第四个操作同操作三，询问区间最大值更新<br>总的来说其实不难想，就是把两个数据结构写写好套一套就行了<del>注意细节</del></li>
+</ul>
+<p><del>说好来练动态开点线段树的呢？</del></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/10/08/SDOI2014-旅行/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="othame.com/2018/09/30/Hello-World/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -572,7 +757,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1224,6 +1409,8 @@
 
   
   
+    
+      
     
       
     
